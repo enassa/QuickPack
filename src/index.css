@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html {
+    font-family: Proxima Nova, system-ui, sans-serif;
+    /* font-family: "Arial rouunded MT Bold"; */
+  }
+}
+:root {
+  --hover-custom-new-color: #de8f5689;
+}
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.logo-font {
+  font-family: "Arial Rounded MT Bold";
+}
+
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.tooltip-item {
+  display: none;
+}
+
+.tooltip:hover .tooltip-item {
+  visibility: visible;
+  display: block;
+}
+
+.h1-important {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#pulser {
+  /* position: absolute;
+    min-width: 100vw;
+    min-height: 100vh; */
+  background: red;
+  animation-name: pulser;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 0;
+}
+
+@keyframes pulser {
+  0% {
+    background-color: red;
+  }
+  49% {
+    background-color: red;
+  }
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: white;
+  }
 }
