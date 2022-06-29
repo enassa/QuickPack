@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-import EasyCSS from "./easy.css/easy-css";
 import Documentation from "./main/documentation";
 
 export default function App() {
